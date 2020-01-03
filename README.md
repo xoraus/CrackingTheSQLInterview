@@ -201,28 +201,27 @@ Single line comments start with -- .
 Any text between -- and the end of the line will be ignored (will not be executed).
 
 The following example uses a single-line comment as an explanation:
-
+```
 -   --Select all:
 -   SELECT * FROM Customers;
-
+```	
 Multi-line comments start with /* and end with */ .
 
 Any text between /* and */ will be ignored.
 
 The following example uses a multi-line comment as an explanation:
-
+```
 -   /*Select all the columns
 -   of all the records
 -   in the Customers table:*/
 -   SELECT * FROM Customers;
-
+```
 The following example uses a multi-line comment to ignore many statements:
-
+```
 -   /*SELECT * FROM Customers;
 -   SELECT * FROM Products;*/
 -   SELECT * FROM Suppliers;
-
-  
+```
 
 **11. Which SQL statement is used to extract data from a database?**
 
@@ -284,10 +283,10 @@ The SELECT statement is used to select data from a database.
 The data returned is stored in a result table, called the result-set.
 
 **SELECT Syntax**
-
+```
 -   SELECT column1, column2, ...
 -   FROM table_name;
-
+```
 Here, column1, column2, ... are the field names of the table you want to select data from. If you want to select all the fields available in the table, use the following syntax:
 
 SELECT * FROM table_name;
@@ -307,10 +306,10 @@ The SELECT DISTINCT statement is used to return only distinct (different) values
 Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
 
 **SELECT DISTINCT Syntax**  
-
+```
 -   SELECT DISTINCT column1, column2, ...
 -   FROM table_name;
-
+```
   
 
 **17. Consider the following schema ADDRESSES (id, street_name, number, city, state) Which of the following query would display the distinct cities in the ADDRESSES table?**
@@ -344,23 +343,23 @@ The OR operator displays a record if any of the conditions separated by OR are T
 The NOT operator displays a record if the condition(s) is NOT TRUE .
 
 **AND Syntax**
-
+```
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   WHERE condition1 AND condition2 AND condition3 …;
-
+```
 **OR Syntax**
-
+```
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   WHERE condition1 OR condition2 OR condition3 ...;
-
+```
 **NOT Syntax**
-
+```
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   WHERE NOT condition;
-
+```
   
 
   
@@ -386,9 +385,9 @@ SQL Comparison Operators
 <> Not equal to
 
 **21. With SQL, how do you select all the records from a table named "Customers" where the "FirstName" is "John" and the "LastName" is "Jackson"?**
-
+```
 SELECT * FROM Customers WHERE FirstName='John' AND LastName='Jackson'
-
+```
 Same answers as for the previous 2 questions.
 
 You must use the AND operator that displays a record if all the conditions separated by AND are TRUE and the = (‘equal’) comparison operator.
@@ -404,9 +403,9 @@ You must use the AND operator that displays a record if all the conditions separ
 **22. How to select random 10 rows from a table?**
 
 The easiest way to generate random rows in MySQL is to use the ORDER BY RAND() clause.
-
+```
 SELECT * FROM tbl ORDER BY RAND() LIMIT 10;
-
+```
 This can work fine for small tables. However, for big table, it will have a serious performance problem as in order to generate the list of random rows, MySQL need to assign random number to each row and then sort them.
 
 Even if you want only 10 random rows from a set of 100k rows, MySQL need to sort all the 100k rows and then, extract only 10 of them.
@@ -438,15 +437,15 @@ Note: It is very important to understand that a NULL value is different from a z
 **MySQL**
 
 The MySQL IFNULL() function lets you return an alternative value if an expression is NULL:
-
+```
 -   SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))
 -   FROM Products
-
+```
 or we can use the COALESCE() function, like this:
-
+```
 -   SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))
 -   FROM Products
-
+```
 **SQL Server**
 
 The **SQL Server** ISNULL() function lets you return an alternative value when an expression is NULL :
@@ -503,11 +502,11 @@ The BETWEEN operator selects values within a given range. The values can be numb
 The BETWEEN operator is inclusive: begin and end values are included.
 
 **BETWEEN Syntax**
-
+```
 -   SELECT column_name(s)
 -   FROM table_name
 -   WHERE column_name BETWEEN value1 AND value2;
-
+```
 **27. Which of the following SQL statements is correct?**
 
 SELECT * FROM Sales WHERE Date BETWEEN '01/12/2017' AND '01/01/2018'  
@@ -515,9 +514,9 @@ SELECT * FROM Sales WHERE Date BETWEEN '01/12/2017' AND '01/01/2018'
 Explanation from previous question applies.
 
 **28. With SQL, how do you select all the records from a table named "Customers" where the "LastName" is alphabetically between (and including) "Brooks" and "Gray"?**
-
+```
 SELECT * FROM Customers WHERE LastName BETWEEN 'Brooks' AND 'Gray'  
-
+```
 Explanation from previous question applies.
 
   
@@ -537,17 +536,17 @@ The IN operator allows you to specify multiple values in a WHERE clause.
 The IN operator is a shorthand for multiple OR conditions.
 
 **IN Syntax**
-
+```
 -   SELECT column_name(s)
 -   FROM table_name
 -   WHERE column_name IN (value1, value2, ...);
-
+```
 or:
-
+```
 -   SELECT column_name(s)
 -   FROM table_name
 -   WHERE column_name IN (SELECT STATEMENT); --subquery
-
+```
 **30. What does UPPER function do?**
 
 The UPPER() function converts a string to upper-case.
@@ -577,21 +576,21 @@ The CURRENT_DATE() function is a synonym for the CURDATE() function.
 The MAX() function returns the largest value of the selected column.
 
 **MAX() Syntax**
-
+```
 -   SELECT MAX(column_name)
 -   FROM table_name
 -   WHERE condition;
-
+```
 **34. Which SQL functions is used to count the number of results?**
 
 The COUNT() function returns the number of rows that matches a specified criteria.
 
 **COUNT() Syntax**
-
+```
 -   SELECT COUNT(column_name)
 -   FROM table_name
 -   WHERE condition;
-
+```
   
 
   
@@ -623,11 +622,11 @@ Same answer as for the previous question.
 The ORDER BY keyword is used to sort the result-set in ascending or descending order.
 
 **ORDER BY Syntax**
-
+```
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   ORDER BY column1, column2, ... ASC|DESC;
-
+```
   
 
 **38. If you don't specify ASC or DESC for an ORDER BY clause, the following is used by default:**
@@ -651,9 +650,9 @@ The SELECT TOP clause is useful on large tables with thousands of records. Retur
 Not all database systems support the SELECT TOP clause.**MySQL supports the** LIMIT clause to select a limited number of records, while **Oracle uses** ROWNUM .
 
 **40. With SQL, how can you return all the records from a table named "Customers" sorted descending by "FirstName"?**
-
+```
 _SELECT * FROM Customers ORDER BY FirstName DESC;_
-
+```
 Same answers as for the previous 2 questions apply.
 
   
@@ -743,12 +742,12 @@ Yes. You can join multiple tables with inner join.
 For example, for a Faculty table the lookup tables might be Division, with DivisionID as the PK, Country, with CountryID as the PK, and Nationality, with NationalityID as the PK. To join Faculty to the Division, Country, and Nationality tables, the fields DivisionID, CountryID and NationalityID would need to be foreign keys in the Faculty table.  
 
 The SQL to join them would then be:
-
+```
 -   SELECT <fieldlist> FROM Faculty AS f
 -   INNER JOIN Division AS d ON d.FacultyID = f.FacultyID
 -   INNER JOIN Country AS c ON c.FacultyID = f.FacultyID
 -   INNER JOIN Nationality AS n ON n.FacultyID = f.FacultyID
-
+```
   
 
   
@@ -762,11 +761,11 @@ The SQL to join them would then be:
 Yes. The operation is called self join.
 
 **Self JOIN Syntax**
-
+```
 -   SELECT column_name(s)
 -   FROM table1 T1, table1 T2
 -   WHERE condition;
-
+```
 **50. Which of the following is true about Cartesian Products?**
 
 **A Cartesian product is formed when a join condition is omitted.**
@@ -776,11 +775,11 @@ The SQL CROSS JOIN produces a result set which is the number of rows in the firs
 If WHERE clause is used with CROSS JOIN , it functions like an INNER JOIN .
 
 **CROSS JOIN Syntax**  
-
+```
 -   SELECT *
 -   FROM table1
 -   CROSS JOIN table2;
-
+```
   
 
   
@@ -796,7 +795,7 @@ If WHERE clause is used with CROSS JOIN , it functions like an INNER JOIN .
 The SQL INTERSECT clause/operator is used to combine two SELECT statements, but returns rows only from the first SELECT statement that are identical to a row in the second SELECT statement. This means INTERSECT returns only common rows returned by the two SELECT statements.
 
 **INTERSECT Syntax**
-
+```
 -   SELECT column1 [, column2 ]
 -   FROM table1 [, table2 ]
 -   [WHERE condition]
@@ -804,7 +803,7 @@ The SQL INTERSECT clause/operator is used to combine two SELECT statements, but 
 -   SELECT column1 [, column2 ]
 -   FROM table1 [, table2 ]
 -   [WHERE condition]
-
+```
   
 
   
@@ -840,7 +839,7 @@ Have them in the same order
 But they need not have to be in the same length.
 
 **Union Syntax**
-
+```
 -   SELECT column1 [, column2 ]
 -   FROM table1 [, table2 ]
 -   [WHERE condition]
@@ -848,7 +847,7 @@ But they need not have to be in the same length.
 -   SELECT column1 [, column2 ]
 -   FROM table1 [, table2 ]
 -   [WHERE condition]
-
+```
   
 
 **53. What is the difference between UNION and UNION ALL?**
@@ -864,7 +863,7 @@ UNION ALL – returns all rows selected by either query, including all duplicate
 The **SQL** MINUS operator is used to return all rows in the first SELECT statement that are not returned by the second SELECT statement. Each SELECT statement will define a dataset. The MINUS operator will retrieve all records from the first dataset and then remove from the results all records from the second dataset.
 
 **MINUS Syntax**
-
+```
 -   SELECT expression1, expression2, ... expression_n
 -   FROM tables
 -   [WHERE conditions]
@@ -872,7 +871,7 @@ The **SQL** MINUS operator is used to return all rows in the first SELECT statem
 -   SELECT expression1, expression2, ... expression_n
 -   FROM tables
 -   [WHERE conditions];
-
+```
   
 
   
@@ -894,11 +893,11 @@ The **SQL** MINUS operator is used to return all rows in the first SELECT statem
 A subquery is a SQL query nested inside a main query.
 
 A subquery may occur in :
-
+```
 -   A SELECT clause
 -   A FROM clause
 -   A WHERE clause
-
+```
 A subquery is usually added within the WHERE clause of another SQL SELECT statement.
 
 You can use the comparison operators, such as > , < , or = . The comparison operator can also be a multiple-row operator, such as IN , ANY , or ALL .
@@ -930,7 +929,7 @@ If the output of a subquery is depending on column values of the parent query ta
 The CASE function lets you evaluate conditions and return a value when the first condition is met (like an IF-THEN-ELSE statement).
 
 **CASE Syntax**
-
+```
 -   CASE expression
 -   WHEN condition1 THEN result1
 -   WHEN condition2 THEN result2
@@ -938,7 +937,7 @@ The CASE function lets you evaluate conditions and return a value when the first
 -   WHEN conditionN THEN resultN
 -   ELSE result
 -   END  
-    
+```
 
 **61. What are different types of statements supported by SQL?**
 
