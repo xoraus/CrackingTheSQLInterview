@@ -968,7 +968,7 @@ TRUNCATE TABLE
 **63. DML includes the following SQL statements**
 
 **DML statements are:**
-
+```
 SELECT
 
 INSERT
@@ -976,7 +976,7 @@ INSERT
 UPDATE
 
 DELETE
-
+```
   
 
 **64. Grant and Revoke commands are under**
@@ -1008,15 +1008,15 @@ The INSERT INTO statement is used to insert new records in a table.
 It is possible to write the INSERT INTO statement in two ways.
 
 The first way specifies both the column names and the values to be inserted:
-
+```
 -   INSERT INTO table_name (column1, column2, column3, ...)
 -   VALUES (value1, value2, value3, ...);
-
+```
 If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. The INSERT INTO syntax would be as follows:
-
+```
 -   INSERT INTO table_name
 -   VALUES (value1, value2, value3, ...);
-
+```
 **68. With SQL, how can you insert a new record into the "Customers" table?**
 
 Same answer as for the previous question.
@@ -1032,10 +1032,11 @@ Same answer as for the previous question.
 To create a temporary table, you just need to add the TEMPORARY keyword to the CREATE TABLE statement.
 
 Example:
-
+```
 -   CREATE TEMPORARY TABLE top10customers
 -   SELECT customer.fname, customer.lname
 -   FROM customers
+```
 -   /* all the conditions to fecth the top 10 customers */
 
 **71. Which SQL statement is used to update data in a database?**
@@ -1043,25 +1044,25 @@ Example:
 The UPDATE statement is used to modify the existing records in a table.
 
 **UPDATE Syntax**
-
+```
 -   UPDATE table_name
 -   SET column1 = value1, column2 = value2, ...
 -   WHERE condition;
-
+```
 **72. What is the keyword is used in an UPDATE query to modify the existing value?**
 
 The answer is SET .
 
 **UPDATE Syntax**
-
+```
 -   UPDATE table_name
 -   SET column1 = value1, column2 = value2, ...
 -   WHERE condition;
-
+```
 **73. How can you change "Jackson" into "Hawkins" in the "LastName" column in the Customer table?**
-
+```
 UPDATE Customers SET LastName='Hawkins' WHERE LastName='Jackson'  
-
+```
 Same explanation as for the previous question.
 
 **74. Which SQL statement is used to delete data from a database?**
@@ -1069,10 +1070,10 @@ Same explanation as for the previous question.
 The DELETE statement is used to delete existing records in a table.
 
 **DELETE Syntax**
-
+```
 -   DELETE FROM table_name
 -   WHERE condition;
-
+```
   
 
 **75. With SQL, how can you delete the records where the "FirstName" is "John" in the Customers Table?**
@@ -1084,26 +1085,26 @@ DELETE FROM Customers WHERE FirstName = 'John'
 Specify the table we are are selecting or deleting from.
 
 **DELETE Syntax**
-
+```
 -   DELETE FROM table_name
 -   WHERE condition;
-
+```
 **UPDATE Syntax**
-
+```
 -   UPDATE table_name
 -   SET column1 = value1, column2 = value2, ...
 -   WHERE condition;
-
+```
 **INSERT Syntax**
-
+```
 -   INSERT INTO table_name (column1, column2, column3, ...)
 -   VALUES (value1, value2, value3, ...);
-
+```
 **SELECT Syntax**
-
+```
 -   SELECT column1, column2, ...
 -   FROM table_name;
-
+```
 **77. What is the difference between DELETE and TRUNCATE?**
 
 The basic difference in both is DELETE is DML command and TRUNCATE is DDL.
@@ -1117,14 +1118,14 @@ We can use DELETE with WHERE clause but cannot use TRUNCATE with it.
 The CREATE TABLE statement is used to create a new table in a database.
 
 **Syntax**
-
+```
 -   CREATE TABLE table_name (
 -   column1 datatype,
 -   column2 datatype,
 -   column3 datatype,
 -   ....
 -   );
-
+```
   
 
   
@@ -1168,7 +1169,7 @@ AUTO_INCREMENT allows a unique number to be generated automatically when a new r
 **Syntax for MySQL**
 
 The following SQL statement defines the "ID" column to be an auto-increment primary key field in the "Persons" table:
-
+```
 -   CREATE TABLE Persons (
 -   ID int NOT NULL AUTO_INCREMENT,
 -   LastName varchar(255) NOT NULL,
@@ -1176,18 +1177,18 @@ The following SQL statement defines the "ID" column to be an auto-increment prim
 -   Age int,
 -   PRIMARY KEY (ID)
 -   );
-
+```
 **Syntax for SQL Server**
 
 The following SQL statement defines the "ID" column to be an auto-increment primary key field in the "Persons" table:
-
+```
 -   CREATE TABLE Persons (
 -   ID int IDENTITY(1,1) PRIMARY KEY,
 -   LastName varchar(255) NOT NULL,
 -   FirstName varchar(255),
 -   Age int
 -   );
-
+```
 **Syntax for Oracle**
 
 In Oracle the code is a little bit more tricky.
@@ -1195,20 +1196,20 @@ In Oracle the code is a little bit more tricky.
 You will have to create an auto-increment field with the sequence object (this object generates a number sequence).
 
 Use the following **CREATE SEQUENCE syntax:**
-
+```
 -   CREATE SEQUENCE seq_person
 -   MINVALUE 1
 -   START WITH 1
 -   INCREMENT BY 1
 -   CACHE 10;
-
+```
 The code above creates a sequence object called seq_person, that starts with 1 and will increment by 1. It will also cache up to 10 values for performance. The cache option specifies how many sequence values will be stored in memory for faster access.
 
 To insert a new record into the "Persons" table, we will have to use the nextval function (this function retrieves the next value from seq_person sequence):
-
+```
 -   INSERT INTO Persons (ID,FirstName,LastName)
 -   VALUES (seq_person.nextval,'Lars','Monsen');
-
+```
 The SQL statement above would insert a new record into the "Persons" table. The "ID" column would be assigned the next number from the seq_person sequence. The "FirstName" column would be set to "Lars" and the "LastName" column would be set to "Monsen".
 
 **81. What are valid constraints in MySQL?**
@@ -1282,7 +1283,7 @@ If you define a CHECK constraint on a table it can limit the values in certain c
 The following SQL creates a CHECK constraint on the "Age" column when the "Persons" table is created. The CHECK constraint ensures that you can not have any person below 18 years:
 
 **MySQL:**
-
+```
 -   CREATE TABLE Persons (
 -   ID int NOT NULL,
 -   LastName varchar(255) NOT NULL,
@@ -1290,7 +1291,7 @@ The following SQL creates a CHECK constraint on the "Age" column when the "Perso
 -   Age int,
 -   CHECK (Age>=18)
 -   );
-
+```
 **SQL Server / Oracle / MS Access:**
 
 -   CREATE TABLE Persons (
@@ -1319,9 +1320,9 @@ However, you can have many UNIQUE constraints per table, but only one PRIMARY KE
 The DROP TABLE statement is used to drop an existing table in a database.
 
 **Syntax**
-
+```
 _DROP TABLE table_name;_
-
+```
   
 
 **88. What is the difference between DROP and TRUNCATE?**
@@ -1353,10 +1354,10 @@ The ALTER TABLE statement is also used to add and drop various constraints on an
 **ALTER TABLE - ADD Column**
 
 To add a column in a table, use the following syntax:
-
+```
 -   ALTER TABLE table_name
 -   ADD column_name datatype;
-
+```
 **90. What the correct syntax to rename column 'Address' to 'Addr' in 'Customer' table?**
 
 ALTER TABLE Customer CHANGE Address Addr varchar(50);
@@ -1366,10 +1367,10 @@ ALTER TABLE - CHANGE
 You rename a column using the ALTER TABLE and CHANGE commands together to change an existing column.
 
 **Syntax**
-
+```
 -   ALTER TABLE table_name
 -   CHANGE oldname newname datatype ;
-
+```
   
 
   
@@ -1385,10 +1386,10 @@ ALTER TABLE addresses DROP COLUMN city;
 ALTER TABLE - DROP COLUMN
 
 To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):
-
+```
 -   ALTER TABLE table_name
 -   DROP COLUMN column_name;
-
+```
   
 
   
@@ -1402,10 +1403,10 @@ Note: Updating a table with indexes takes more time than updating a table withou
 **CREATE INDEX Syntax**
 
 Creates an index on a table. Duplicate values are allowed:
-
+```
 -   CREATE INDEX index_name
 -   ON table_name (column1, column2, ...);
-
+```
   
 
   
@@ -1427,22 +1428,22 @@ SQL GRANT and REVOKE commands are used to implement privileges in SQL multiple u
 GRANT Command: This command is used provide database access to user apart from an administrator.
 
 **Syntax**
-
+```
 -   GRANT privilege_name
 -   ON object_name
 -   TO {user_name|PUBLIC|role_name}
 -   [WITH GRANT OPTION];
-
+```
 In above syntax WITH GRANT OPTIONS indicates that the user can grant the access to another user too.
 
 REVOKE Command: This command is used provide database deny or remove access to database objects.
 
 **Syntax**
-
+```
 -   REVOKE privilege_name
 -   ON object_name
 -   FROM {user_name|PUBLIC|role_name};
-
+```
   
 
   
@@ -1496,9 +1497,9 @@ When we use any DML command like INSERT , UPDATE or DELETE , the changes made by
 To avoid that, we use the COMMIT command to mark the changes as permanent.
 
 Following is commit command syntax:
-
+```
 _COMMIT;_
-
+```
 ROLLBACK command
 
 This command restores the database to last committed state. It is also used with SAVEPOINT command to jump to a savepoint in an ongoing transaction.
@@ -1598,12 +1599,12 @@ A view contains rows and columns, just like a real table. The fields in a view a
 You can add SQL functions, WHERE , and JOIN statements to a view and present the data as if the data were coming from one single table.
 
 **CREATE VIEW Syntax**
-
+```
 -   CREATE VIEW view_name AS
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   WHERE condition;
-
+```
   
 
   
@@ -1730,11 +1731,11 @@ A database operation (SERVERERROR , LOGON , LOGOFF , STARTUP , or SHUTDOWN ).
 Action and Event are two main components of SQL triggers when certain actions are performed the event occurs in response to that action.
 
 **Syntax**
-
+```
 -   CREATE TRIGGER name {BEFORE|AFTER} (event [OR..]}
 -   ON table_name [FOR [EACH] {ROW|STATEMENT}]
 -   EXECUTE PROCEDURE functionname {arguments}
-
+```
 **114. There are triggers for…**
 
 Same answer as for the previous question.
