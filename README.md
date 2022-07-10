@@ -73,19 +73,19 @@ PL/SQL is a combination of SQL along with the procedural features of programming
 
 Another common SQL interview question regarding PL/SQL may come in a different form:
 
-“What is the difference between SQL and PL/SQL? or Difference between SQL and PL/SQL:
+##### “What is the difference between SQL and PL/SQL? or Difference between SQL and PL/SQL:
 
 SQL is a Structured Query Language used to issue a single query or execute a single insert/update/delete.
 
-PL-SQL is a programming language SQL, used to write full programs using variables, loops,operators etc. to carry out multiple selects/inserts/updates/deletes.
+- PL-SQL is a programming language SQL, used to write full programs using variables, loops,operators etc. to carry out multiple selects/inserts/updates/deletes.
 
-SQL may be considered as the source of data for our reports, web pages and screens.
+- SQL may be considered as the source of data for our reports, web pages and screens.
 
-PL/SQL can be considered as the application language similar to Java or PHP. It might be the language used to build, format and display those reports, web pages and screens.
+- PL/SQL can be considered as the application language similar to Java or PHP. It might be the language used to build, format and display those reports, web pages and screens.
 
-SQL is a data oriented language used to select and manipulate sets of data.
+- SQL is a data oriented language used to select and manipulate sets of data.
 
-PL/SQL is a procedural language used to create applications.
+- PL/SQL is a procedural language used to create applications.
 
 #### **SQL vs. PL-SQL**
 
@@ -100,11 +100,9 @@ PL/SQL is a procedural language used to create applications.
 
 MySQL uses TINYINT(1) data type to represent boolean values. A value of zero is considered false . Non-zero values are considered true .
 
-  
-
 **8. What data type would you choose if you wanted to store the distance (rounded to the nearest mile)?**
 
-```
+```sql
 INTEGER (or INT )   
 ```
 
@@ -138,9 +136,9 @@ Any text between -- and the end of the line will be ignored (will not be execute
 
 The following example uses a single-line comment as an explanation:
 
-```
--   --Select all:
--   SELECT * FROM Customers;
+```sql
+--Select all:
+SELECT * FROM Customers;
 ```
 
 Multi-line comments start with /* and end with */ .
@@ -149,19 +147,19 @@ Any text between /* and */ will be ignored.
 
 The following example uses a multi-line comment as an explanation:
 
-```
--   /*Select all the columns
--   of all the records
--   in the Customers table:*/
--   SELECT * FROM Customers;
+```sql
+/*Select all the columns
+of all the records
+in the Customers table:*/
+SELECT * FROM Customers;
 ```
 
 The following example uses a multi-line comment to ignore many statements:
 
-```
--   /*SELECT * FROM Customers;
--   SELECT * FROM Products;*/
--   SELECT * FROM Suppliers;
+```sql
+/*SELECT * FROM Customers;
+SELECT * FROM Products;*/
+SELECT * FROM Suppliers;
 ```
 
 **11. Which SQL statement is used to extract data from a database?**
@@ -172,15 +170,15 @@ As SQL is a declarative programming language, SELECT queries specify a result se
 
 The SELECT statement has many optional clauses:
 
-WHERE specifies which rows to retrieve.
+- **WHERE** specifies which rows to retrieve.
 
-GROUP BY groups rows sharing a property so that an aggregate function can be applied to each group.
+- **GROUP BY** groups rows sharing a property so that an aggregate function can be applied to each group.
 
-HAVING selects among the groups defined by the GROUP BY clause.
+- **HAVING** selects among the groups defined by the GROUP BY clause.
 
-ORDER BY specifies an order in which to return the rows.
+- **ORDER BY** specifies an order in which to return the rows.
 
-AS provides an alias which can be used to temporarily rename tables or columns.  
+- **AS** provides an alias which can be used to temporarily rename tables or columns.  
 
 **12. How to select all records from the table 'Products'?**
 
@@ -189,8 +187,6 @@ SELECT * FROM Products;
 If you want to select all the fields available in the table, use the * syntax as this:
 
 SELECT * FROM Products;
-
-  
 
 **13. Can we rename a column in the output of SQL query?**
 
@@ -207,8 +203,6 @@ Alias Column Syntax:
 -   SELECT column_name AS alias_name
 -   FROM table_name;
 
-  
-
 **14. With SQL, how do you select a column named "FirstName" from a table named "Customers"?**
 
 SELECT FirstName FROM Customers;
@@ -219,9 +213,9 @@ The data returned is stored in a result table, called the result-set.
 
 **SELECT Syntax**
 
-```
--   SELECT column1, column2, ...
--   FROM table_name;
+```sql
+SELECT column1, column2, ...
+FROM table_name;
 ```
 
 Here, column1, column2, ... are the field names of the table you want to select data from. If you want to select all the fields available in the table, use the following syntax:
@@ -240,9 +234,9 @@ Inside a table, a column often contains many duplicate values; and sometimes you
 
 **SELECT DISTINCT Syntax**  
 
-```
--   SELECT DISTINCT column1, column2, ...
--   FROM table_name;
+```sql
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
 ```
 
 
@@ -262,8 +256,6 @@ The WHERE clause is used to extract only those records that fulfill a specified 
 
 SQL requires single quotes around text values (most database systems will also allow double quotes).
 
-  
-
 **19. The OR operator displays a record if ANY conditions listed are true. The AND operator displays a record if ALL of the conditions listed are true.**
 
 The WHERE clause can be combined with AND , OR , and NOT operators.
@@ -278,26 +270,26 @@ The NOT operator displays a record if the condition(s) is NOT TRUE .
 
 **AND Syntax**
 
-```
--   SELECT column1, column2, ...
--   FROM table_name
--   WHERE condition1 AND condition2 AND condition3 …;
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3 …;
 ```
 
 **OR Syntax**
 
-```
--   SELECT column1, column2, ...
--   FROM table_name
--   WHERE condition1 OR condition2 OR condition3 ...;
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 OR condition2 OR condition3 ...;
 ```
 
 **NOT Syntax**
 
-```
--   SELECT column1, column2, ...
--   FROM table_name
--   WHERE NOT condition;
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE NOT condition;
 ```
 
 
@@ -307,21 +299,21 @@ SELECT * FROM Table1 WHERE Column1 >= 100
 
 SQL Comparison Operators
 
-'=' Equal to
+- '=' Equal to
 
-'>' Greater than
+- '>' Greater than
 
-'<' Less than
+- '<' Less than
 
-'>=' Greater than or equal to
+- '>=' Greater than or equal to
 
-'<=' Less than or equal to
+- '<=' Less than or equal to
 
-'≠' Not equal to
+- '≠' Not equal to
 
 **21. With SQL, how do you select all the records from a table named "Customers" where the "FirstName" is "John" and the "LastName" is "Jackson"?**
 
-```
+```sql
 SELECT * FROM Customers WHERE FirstName='John' AND LastName='Jackson'
 ```
 
@@ -329,19 +321,11 @@ Same answers as for the previous 2 questions.
 
 You must use the AND operator that displays a record if all the conditions separated by AND are TRUE and the = (‘equal’) comparison operator.
 
-  
-
-  
-
-  
-
-  
-
 **22. How to select random 10 rows from a table?**
 
 The easiest way to generate random rows in MySQL is to use the ORDER BY RAND() clause.
 
-```
+```sql
 SELECT * FROM tbl ORDER BY RAND() LIMIT 10;
 ```
 
@@ -365,16 +349,16 @@ Note: It is very important to understand that a NULL value is different from a z
 
 The MySQL IFNULL() function lets you return an alternative value if an expression is NULL:
 
-```
--   SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))
--   FROM Products
+```sql
+SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))
+FROM Products
 ```
 
 or we can use the COALESCE() function, like this:
 
-```
--   SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))
--   FROM Products
+```sql
+SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))
+FROM Products
 ```
 
 **SQL Server**
@@ -431,10 +415,10 @@ The BETWEEN operator is inclusive: begin and end values are included.
 
 **BETWEEN Syntax**
 
-```
--   SELECT column_name(s)
--   FROM table_name
--   WHERE column_name BETWEEN value1 AND value2;
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
 ```
 
 **27. Which of the following SQL statements is correct?**
@@ -445,7 +429,7 @@ Explanation from previous question applies.
 
 **28. With SQL, how do you select all the records from a table named "Customers" where the "LastName" is alphabetically between (and including) "Brooks" and "Gray"?**
 
-```
+```sql
 SELECT * FROM Customers WHERE LastName BETWEEN 'Brooks' AND 'Gray'  
 ```
 
@@ -459,18 +443,18 @@ The IN operator is a shorthand for multiple OR conditions.
 
 **IN Syntax**
 
-```
--   SELECT column_name(s)
--   FROM table_name
--   WHERE column_name IN (value1, value2, ...);
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
 ```
 
 or:
 
-```
--   SELECT column_name(s)
--   FROM table_name
--   WHERE column_name IN (SELECT STATEMENT); --subquery
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT); --subquery
 ```
 
 **30. What does UPPER function do?**
@@ -485,11 +469,7 @@ The CEIL() function is a synonym for the CEILING() function and also returns the
 
 Example:
 
-SELECT CEILING(25.50); -- returns 26
-
-  
-
-  
+SELECT CEILING(25.50); -- returns 26  
 
 **32. How to get current date in MySQL (without time)?**
 
@@ -503,10 +483,10 @@ The MAX() function returns the largest value of the selected column.
 
 **MAX() Syntax**
 
-```
--   SELECT MAX(column_name)
--   FROM table_name
--   WHERE condition;
+```sql
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
 ```
 
 **34. Which SQL functions is used to count the number of results?**
@@ -515,26 +495,24 @@ The COUNT() function returns the number of rows that matches a specified criteri
 
 **COUNT() Syntax**
 
+```sql
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
 ```
--   SELECT COUNT(column_name)
--   FROM table_name
--   WHERE condition;
-```
-
-
 
 
 **35. Which of the following are Aggregate Functions?**
 
 SQL Aggregate functions are:
 
-**COUNT** counts how many rows are in a particular column.
+- **COUNT** counts how many rows are in a particular column.
 
-**SUM** adds together all the values in a particular column.
+- **SUM** adds together all the values in a particular column.
 
-**MIN** and **MAX** return the lowest and highest values in a particular column, respectively.
+- **MIN** and **MAX** return the lowest and highest values in a particular column, respectively.
 
-**AVG** calculates the average of a group of selected values.
+- **AVG** calculates the average of a group of selected values.
 
 **36. With SQL, how can you return the number of records in the "Customers" table?**
 
@@ -550,10 +528,10 @@ The ORDER BY keyword is used to sort the result-set in ascending or descending o
 
 **ORDER BY Syntax**
 
-```
--   SELECT column1, column2, ...
--   FROM table_name
--   ORDER BY column1, column2, ... ASC|DESC;
+```sql
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
 ```
 
 
@@ -579,8 +557,8 @@ Not all database systems support the SELECT TOP clause.**MySQL supports the** LI
 
 **40. With SQL, how can you return all the records from a table named "Customers" sorted descending by "FirstName"?**
 
-```
-_SELECT * FROM Customers ORDER BY FirstName DESC;_
+```sql
+SELECT * FROM Customers ORDER BY FirstName DESC;
 ```
 
 Same answers as for the previous 2 questions apply.
@@ -599,17 +577,15 @@ If GROUP BY clause is not used then HAVING behaves like WHERE clause only.
 
 Here are some other differences:
 
-HAVING filters records that work on summarized GROUP BY results.
+- HAVING filters records that work on summarized GROUP BY results.
 
-HAVING applies to summarized group records, whereas WHERE applies to individual records.
+- HAVING applies to summarized group records, whereas WHERE applies to individual records.
 
-Only the groups that meet the HAVING criteria will be returned.
+- Only the groups that meet the HAVING criteria will be returned.
 
-HAVING requires that a GROUP BY clause is present.
+- HAVING requires that a GROUP BY clause is present.
 
-WHERE and HAVING can be in the same query.
-
-  
+- WHERE and HAVING can be in the same query.
 
 **43. What is JOIN used for?**
 
@@ -669,11 +645,11 @@ For example, for a Faculty table the lookup tables might be Division, with Divis
 
 The SQL to join them would then be:
 
-```
--   SELECT <fieldlist> FROM Faculty AS f
--   INNER JOIN Division AS d ON d.FacultyID = f.FacultyID
--   INNER JOIN Country AS c ON c.FacultyID = f.FacultyID
--   INNER JOIN Nationality AS n ON n.FacultyID = f.FacultyID
+```sql
+SELECT <fieldlist> FROM Faculty AS f
+INNER JOIN Division AS d ON d.FacultyID = f.FacultyID
+INNER JOIN Country AS c ON c.FacultyID = f.FacultyID
+INNER JOIN Nationality AS n ON n.FacultyID = f.FacultyID
 ```
 
 
@@ -683,10 +659,10 @@ Yes. The operation is called self join.
 
 **Self JOIN Syntax**
 
-```
--   SELECT column_name(s)
--   FROM table1 T1, table1 T2
--   WHERE condition;
+```sql
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
 ```
 
 **50. Which of the following is true about Cartesian Products?**
@@ -699,10 +675,10 @@ If WHERE clause is used with CROSS JOIN , it functions like an INNER JOIN .
 
 **CROSS JOIN Syntax**  
 
-```
--   SELECT *
--   FROM table1
--   CROSS JOIN table2;
+```sql
+SELECT *
+FROM table1
+CROSS JOIN table2;
 ```
 
 **51. In relational algebra the INTERSECTION of two sets (set A and Set B) corresponds to**
@@ -713,14 +689,14 @@ The SQL INTERSECT clause/operator is used to combine two SELECT statements, but 
 
 **INTERSECT Syntax**
 
-```
--   SELECT column1 [, column2 ]
--   FROM table1 [, table2 ]
--   [WHERE condition]
--   INTERSECT
--   SELECT column1 [, column2 ]
--   FROM table1 [, table2 ]
--   [WHERE condition]
+```sql
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+INTERSECT
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
 ```
 
 
@@ -744,22 +720,21 @@ But they need not have to be in the same length.
 
 **Union Syntax**
 
+```sql
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+UNION
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
 ```
--   SELECT column1 [, column2 ]
--   FROM table1 [, table2 ]
--   [WHERE condition]
--   UNION
--   SELECT column1 [, column2 ]
--   FROM table1 [, table2 ]
--   [WHERE condition]
-```
-
 
 **53. What is the difference between UNION and UNION ALL?**
 
-UNION – returns all distinct rows selected by either query
+**UNION** – returns all distinct rows selected by either query
 
-UNION ALL – returns all rows selected by either query, including all duplicates.
+**UNION ALL** – returns all rows selected by either query, including all duplicates.
 
 **54. Having a list of Customer Names that searched for product 'X' and a list of customer Names that bought the product 'X'. What set operator would you use to get only those who are interested but did not bought product 'X' yet?**
 
@@ -769,27 +744,15 @@ The **SQL** MINUS operator is used to return all rows in the first SELECT statem
 
 **MINUS Syntax**
 
+```sql
+SELECT expression1, expression2, ... expression_n
+FROM tables
+[WHERE conditions]
+MINUS
+SELECT expression1, expression2, ... expression_n
+FROM tables
+[WHERE conditions];
 ```
--   SELECT expression1, expression2, ... expression_n
--   FROM tables
--   [WHERE conditions]
--   MINUS
--   SELECT expression1, expression2, ... expression_n
--   FROM tables
--   [WHERE conditions];
-```
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 **55. One (or more) select statement whose return values are used in filtering conditions of the main query is called**
@@ -800,10 +763,10 @@ A subquery is a SQL query nested inside a main query.
 
 A subquery may occur in :
 
-```
--   A SELECT clause
--   A FROM clause
--   A WHERE clause
+```sql
+A SELECT clause
+A FROM clause
+A WHERE clause
 ```
 
 A subquery is usually added within the WHERE clause of another SQL SELECT statement.
@@ -826,8 +789,6 @@ You can use the comparison operators, such as > , < , or = . The comparison oper
 
 Subquery within another subquery is called as **Nested Subquery**.
 
-  
-
 **59. A subquery that uses a correlation name from the outer query is called a**
 
 If the output of a subquery is depending on column values of the parent query table then the query is called **Correlated Subquery**.
@@ -838,14 +799,14 @@ The CASE function lets you evaluate conditions and return a value when the first
 
 **CASE Syntax**
 
-```
--   CASE expression
--   WHEN condition1 THEN result1
--   WHEN condition2 THEN result2
--   ...
--   WHEN conditionN THEN resultN
--   ELSE result
--   END  
+```sql
+CASE expression
+WHEN condition1 THEN result1
+WHEN condition2 THEN result2
+...
+WHEN conditionN THEN resultN
+ELSE result
+END  
 ```
 
 **61. What are different types of statements supported by SQL?**
@@ -862,19 +823,19 @@ Note: Some people prefer to assign the SELECT statement to a category of its own
 
 **DDL statements include:**
 
-ALTER Statements
+- ALTER Statements
 
-CREATE Statements
+- CREATE Statements
 
-DROP Statements
+- DROP Statements
 
-TRUNCATE TABLE
+- TRUNCATE TABLE
 
 **63. DML includes the following SQL statements**
 
 **DML statements are:**
 
-```
+```sql
 SELECT
 INSERT
 UPDATE
@@ -908,16 +869,16 @@ It is possible to write the INSERT INTO statement in two ways.
 
 The first way specifies both the column names and the values to be inserted:
 
-```
--   INSERT INTO table_name (column1, column2, column3, ...)
--   VALUES (value1, value2, value3, ...);
+```sql
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
 ```
 
 If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. The INSERT INTO syntax would be as follows:
 
-```
--   INSERT INTO table_name
--   VALUES (value1, value2, value3, ...);
+```sql
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
 ```
 
 **68. With SQL, how can you insert a new record into the "Customers" table?**
@@ -934,10 +895,10 @@ To create a temporary table, you just need to add the TEMPORARY keyword to the C
 
 Example:
 
-```
--   CREATE TEMPORARY TABLE top10customers
--   SELECT customer.fname, customer.lname
--   FROM customers
+```sql
+CREATE TEMPORARY TABLE top10customers
+SELECT customer.fname, customer.lname
+FROM customers
 ```
 
 -   /* all the conditions to fecth the top 10 customers */
@@ -960,15 +921,15 @@ The answer is SET .
 
 **UPDATE Syntax**
 
-```
--   UPDATE table_name
--   SET column1 = value1, column2 = value2, ...
--   WHERE condition;
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
 ```
 
 **73. How can you change "Jackson" into "Hawkins" in the "LastName" column in the Customer table?**
 
-```
+```sql
 UPDATE Customers SET LastName='Hawkins' WHERE LastName='Jackson'  
 ```
 
@@ -980,9 +941,9 @@ The DELETE statement is used to delete existing records in a table.
 
 **DELETE Syntax**
 
-```
--   DELETE FROM table_name
--   WHERE condition;
+```sql
+DELETE FROM table_name
+WHERE condition;
 ```
 
 
@@ -996,31 +957,31 @@ Specify the table we are are selecting or deleting from.
 
 **DELETE Syntax**
 
-```
--   DELETE FROM table_name
--   WHERE condition;
+```sql
+DELETE FROM table_name
+WHERE condition;
 ```
 
 **UPDATE Syntax**
 
-```
--   UPDATE table_name
--   SET column1 = value1, column2 = value2, ...
--   WHERE condition;
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
 ```
 
 **INSERT Syntax**
 
-```
--   INSERT INTO table_name (column1, column2, column3, ...)
--   VALUES (value1, value2, value3, ...);
+```sql
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
 ```
 
 **SELECT Syntax**
 
-```
--   SELECT column1, column2, ...
--   FROM table_name;
+```sql
+SELECT column1, column2, ...
+FROM table_name;
 ```
 
 **77. What is the difference between DELETE and TRUNCATE?**
@@ -1037,13 +998,13 @@ The CREATE TABLE statement is used to create a new table in a database.
 
 **Syntax**
 
-```
--   CREATE TABLE table_name (
--   column1 datatype,
--   column2 datatype,
--   column3 datatype,
--   ....
--   );
+```sql
+CREATE TABLE table_name (
+column1 datatype,
+column2 datatype,
+column3 datatype,
+....
+);
 ```
 
 **79. What is Collation in SQL?**
