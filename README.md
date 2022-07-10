@@ -1,8 +1,6 @@
-
 # **Cracking the SQL Interview**
-## A comprehensive guide before your next interview
-  
 
+## A comprehensive guide before your next interview
 
 **1. SQL was developed as an integral part of**
 
@@ -27,77 +25,47 @@ What Can SQL do?
 -   SQL can create views in a database
 -   SQL can set permissions on tables, procedures, and views
 
-  
-
-  
-
-  
-
-  
-
 **2. What does SQL stand for?**
 
 SQL stands for Structured Query Language.
-
 SQL lets you access and manipulate databases.
-
 SQL is an ANSI (American National Standards Institute) standard.
-
-  
 
 **3. SQL is (referring to it as a Programming Language)**
 
 **SQL is a declarative language in which the expected result or operation is given without the specific details about how to accomplish the task.** The steps required to execute SQL statements are handled transparently by the SQL database. Sometimes **SQL is characterized as non-procedural** because procedural languages generally require the details of the operations to be specified, such as opening and closing tables, loading and searching indexes, or flushing buffers and writing data to filesystems. Therefore, SQL is considered to be designed at a higher conceptual level of operation than procedural languages because the lower level logical and physical operations aren't specified and are determined by the SQL engine or server process that executes it.
 
-  
-
 **4. Which of the following is NOT a SQL command? (SELECT, REMOVE, UPDATE, INSERT)**
 
 REMOVE is not a valid SQL command.  
 
-Some of The Most Important SQL Commands
+**Some of The Most Important SQL Commands**
 
+```sql
 SELECT - extracts data from a database
-
 UPDATE - updates data in a database
-
 DELETE - deletes data from a database
-
 INSERT INTO - inserts new data into a database
-
 CREATE DATABASE - creates a new database
-
 ALTER DATABASE - modifies a database
-
 CREATE TABLE - creates a new table
-
 ALTER TABLE - modifies a table
-
 DROP TABLE - deletes a table
-
 CREATE INDEX - creates an index (search key)
-
 DROP INDEX - deletes an index
+```
 
-  
-
-  
-
-  
 
 **5. What is MySQL?**
 
 MySQL is the most popular Open Source SQL database management system developed, distributed, and supported by Oracle Corporation.
 
-Another common SQL interview question regarding MySQL may come in a different form: “**What is the difference between SQL and MySQL?**”  
-  
-**Difference between SQL and MySQL:**
+**Another common SQL interview question regarding MySQL may come in a different form**
+
+“**What is the difference between SQL and MySQL?**” or **Difference between SQL and MySQL:**
 
 SQL is a structured query language that is used for manipulating and accessing the relational database, on the other hand, MySQL itself is a relational database that uses SQL as the standard database language.
 
-  
-
-  
 
 **6. What are some properties of PL/SQL?**
 
@@ -105,8 +73,7 @@ PL/SQL is a combination of SQL along with the procedural features of programming
 
 Another common SQL interview question regarding PL/SQL may come in a different form:
 
-“What is the difference between SQL and PL/SQL?”  
-Difference between SQL and PL/SQL:
+“What is the difference between SQL and PL/SQL? or Difference between SQL and PL/SQL:
 
 SQL is a Structured Query Language used to issue a single query or execute a single insert/update/delete.
 
@@ -120,23 +87,14 @@ SQL is a data oriented language used to select and manipulate sets of data.
 
 PL/SQL is a procedural language used to create applications.
 
-SQL vs. PL-SQL
+#### **SQL vs. PL-SQL**
 
-SQL is used to write queries, DDL and DML statements.
-
-PL/SQL is used to write program blocks, functions, procedures triggers,and packages.
-
-SQL is executed one statement at a time.
-
-PL/SQL is executed as a block of code.
-
-SQL is declarative, i.e., it tells the database what to do but not how to do it.
-
-Whereas, PL/SQL is procedural, i.e., it tells the database how to do things.
-
-SQL can be embedded within a PL/SQL program.
-
-But PL/SQL can’t be embedded within a SQL statement.
+- SQL is used to write queries, DDL and DML statements.
+- PL/SQL is used to write program blocks, functions, procedures triggers,and packages.
+- SQL is executed one statement at a time.
+- PL/SQL is executed as a block of code.
+- SQL is declarative, i.e., it tells the database what to do but not how to do it. Whereas, PL/SQL is procedural, i.e., it tells the database how to do things.
+- SQL can be embedded within a PL/SQL program. But PL/SQL cant be embedded within a SQL statement.
 
 **7. What are the possible values for the BOOLEAN data field in MySQL?**
 
@@ -146,51 +104,29 @@ MySQL uses TINYINT(1) data type to represent boolean values. A value of zero is 
 
 **8. What data type would you choose if you wanted to store the distance (rounded to the nearest mile)?**
 
-INTEGER (or INT )  
+```
+INTEGER (or INT )   
+```
 
 **9. Which are valid SQL keywords (statements & clauses)**
 
-SELECT - extracts data from a database
+- SELECT - extracts data from a database
+- FROM - clause is used to specify the tables to extract data from
+- WHERE - clause is used to extract only those records that fulfill a specified condition.
+- GROUP BY - is often used with aggregate functions (COUNT , MAX , MIN , SUM , AVG ) to group the result-set by one or more columns.
+- HAVING - clause was added to SQL because the WHERE keyword could not be used with aggregate functions.
+- ORDER BY - keyword is used to sort the result-set in ascending or descending order.
+- UPDATE - updates data in a database
+- DELETE - deletes data from a database
+- INSERT INTO - inserts new data into a database
+- CREATE DATABASE - creates a new database
+- ALTER DATABASE - modifies a database
+- CREATE TABLE - creates a new table
+- ALTER TABLE - modifies a table
+- DROP TABLE - deletes a table
+- CREATE INDEX - creates an index (search key)
+- DROP INDEX - deletes an index
 
-FROM - clause is used to specify the tables to extract data from
-
-WHERE - clause is used to extract only those records that fulfill a specified condition.
-
-GROUP BY - is often used with aggregate functions (COUNT , MAX , MIN , SUM , AVG ) to group the result-set by one or more columns.
-
-HAVING - clause was added to SQL because the WHERE keyword could not be used with aggregate functions.
-
-ORDER BY - keyword is used to sort the result-set in ascending or descending order.
-
-UPDATE - updates data in a database
-
-DELETE - deletes data from a database
-
-INSERT INTO - inserts new data into a database
-
-CREATE DATABASE - creates a new database
-
-ALTER DATABASE - modifies a database
-
-CREATE TABLE - creates a new table
-
-ALTER TABLE - modifies a table
-
-DROP TABLE - deletes a table
-
-CREATE INDEX - creates an index (search key)
-
-DROP INDEX - deletes an index
-
-  
-
-  
-
-  
-
-  
-
-  
 
 **10. Which of the following are valid SQL comments?**
 
@@ -201,22 +137,27 @@ Single line comments start with -- .
 Any text between -- and the end of the line will be ignored (will not be executed).
 
 The following example uses a single-line comment as an explanation:
+
 ```
 -   --Select all:
 -   SELECT * FROM Customers;
-```	
+```
+
 Multi-line comments start with /* and end with */ .
 
 Any text between /* and */ will be ignored.
 
 The following example uses a multi-line comment as an explanation:
+
 ```
 -   /*Select all the columns
 -   of all the records
 -   in the Customers table:*/
 -   SELECT * FROM Customers;
 ```
+
 The following example uses a multi-line comment to ignore many statements:
+
 ```
 -   /*SELECT * FROM Customers;
 -   SELECT * FROM Products;*/
@@ -239,11 +180,7 @@ HAVING selects among the groups defined by the GROUP BY clause.
 
 ORDER BY specifies an order in which to return the rows.
 
-AS provides an alias which can be used to temporarily rename tables or columns.
-
-  
-
-  
+AS provides an alias which can be used to temporarily rename tables or columns.  
 
 **12. How to select all records from the table 'Products'?**
 
@@ -252,8 +189,6 @@ SELECT * FROM Products;
 If you want to select all the fields available in the table, use the * syntax as this:
 
 SELECT * FROM Products;
-
-  
 
   
 
@@ -283,17 +218,15 @@ The SELECT statement is used to select data from a database.
 The data returned is stored in a result table, called the result-set.
 
 **SELECT Syntax**
+
 ```
 -   SELECT column1, column2, ...
 -   FROM table_name;
 ```
+
 Here, column1, column2, ... are the field names of the table you want to select data from. If you want to select all the fields available in the table, use the following syntax:
 
 SELECT * FROM table_name;
-
-  
-
-  
 
 **15. What does the SQL FROM clause do?**
 
@@ -306,11 +239,12 @@ The SELECT DISTINCT statement is used to return only distinct (different) values
 Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
 
 **SELECT DISTINCT Syntax**  
+
 ```
 -   SELECT DISTINCT column1, column2, ...
 -   FROM table_name;
 ```
-  
+
 
 **17. Consider the following schema ADDRESSES (id, street_name, number, city, state) Which of the following query would display the distinct cities in the ADDRESSES table?**
 
@@ -343,28 +277,29 @@ The OR operator displays a record if any of the conditions separated by OR are T
 The NOT operator displays a record if the condition(s) is NOT TRUE .
 
 **AND Syntax**
+
 ```
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   WHERE condition1 AND condition2 AND condition3 …;
 ```
+
 **OR Syntax**
+
 ```
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   WHERE condition1 OR condition2 OR condition3 ...;
 ```
+
 **NOT Syntax**
+
 ```
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   WHERE NOT condition;
 ```
-  
 
-  
-
-  
 
 **20. Which of the following SQL statements has correct syntax?**
 
@@ -372,22 +307,24 @@ SELECT * FROM Table1 WHERE Column1 >= 100
 
 SQL Comparison Operators
 
-= Equal to
+'=' Equal to
 
-> Greater than
+'>' Greater than
 
-< Less than
+'<' Less than
 
->= Greater than or equal to
+'>=' Greater than or equal to
 
-<= Less than or equal to
+'<=' Less than or equal to
 
-<> Not equal to
+'≠' Not equal to
 
 **21. With SQL, how do you select all the records from a table named "Customers" where the "FirstName" is "John" and the "LastName" is "Jackson"?**
+
 ```
 SELECT * FROM Customers WHERE FirstName='John' AND LastName='Jackson'
 ```
+
 Same answers as for the previous 2 questions.
 
 You must use the AND operator that displays a record if all the conditions separated by AND are TRUE and the = (‘equal’) comparison operator.
@@ -403,9 +340,11 @@ You must use the AND operator that displays a record if all the conditions separ
 **22. How to select random 10 rows from a table?**
 
 The easiest way to generate random rows in MySQL is to use the ORDER BY RAND() clause.
+
 ```
 SELECT * FROM tbl ORDER BY RAND() LIMIT 10;
 ```
+
 This can work fine for small tables. However, for big table, it will have a serious performance problem as in order to generate the list of random rows, MySQL need to assign random number to each row and then sort them.
 
 Even if you want only 10 random rows from a set of 100k rows, MySQL need to sort all the 100k rows and then, extract only 10 of them.
@@ -420,32 +359,24 @@ If a field in a table is optional, it is possible to insert a new record or upda
 
 Note: It is very important to understand that a NULL value is different from a zero value or a field that contains spaces. A field with a NULL value is one that has been left blank during record creation!
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
 **How can you return a default value for a NULL?**
 
 **MySQL**
 
 The MySQL IFNULL() function lets you return an alternative value if an expression is NULL:
+
 ```
 -   SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL(UnitsOnOrder, 0))
 -   FROM Products
 ```
+
 or we can use the COALESCE() function, like this:
+
 ```
 -   SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))
 -   FROM Products
 ```
+
 **SQL Server**
 
 The **SQL Server** ISNULL() function lets you return an alternative value when an expression is NULL :
@@ -466,7 +397,6 @@ The Oracle NVL() function achieves the same result:
 
 -   SELECT ProductName, UnitPrice * (UnitsInStock + NVL(UnitsOnOrder, 0))
 -   FROM Products  
-    
 
 **24. Which operator is used to search for a specified text pattern in a column?**
 
@@ -493,8 +423,6 @@ SELECT * FROM Students WHERE FirstName LIKE 'K%'.
 
 Explanation from previous question applies.
 
-  
-
 **26. Which operator is used to select values within a range?**
 
 The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
@@ -502,11 +430,13 @@ The BETWEEN operator selects values within a given range. The values can be numb
 The BETWEEN operator is inclusive: begin and end values are included.
 
 **BETWEEN Syntax**
+
 ```
 -   SELECT column_name(s)
 -   FROM table_name
 -   WHERE column_name BETWEEN value1 AND value2;
 ```
+
 **27. Which of the following SQL statements is correct?**
 
 SELECT * FROM Sales WHERE Date BETWEEN '01/12/2017' AND '01/01/2018'  
@@ -514,20 +444,12 @@ SELECT * FROM Sales WHERE Date BETWEEN '01/12/2017' AND '01/01/2018'
 Explanation from previous question applies.
 
 **28. With SQL, how do you select all the records from a table named "Customers" where the "LastName" is alphabetically between (and including) "Brooks" and "Gray"?**
+
 ```
 SELECT * FROM Customers WHERE LastName BETWEEN 'Brooks' AND 'Gray'  
 ```
-Explanation from previous question applies.
 
-  
-
-  
-
-  
-
-  
-
-  
+Explanation from previous question applies.  
 
 **29. The 'IN' SQL keyword…**
 
@@ -536,17 +458,21 @@ The IN operator allows you to specify multiple values in a WHERE clause.
 The IN operator is a shorthand for multiple OR conditions.
 
 **IN Syntax**
+
 ```
 -   SELECT column_name(s)
 -   FROM table_name
 -   WHERE column_name IN (value1, value2, ...);
 ```
+
 or:
+
 ```
 -   SELECT column_name(s)
 -   FROM table_name
 -   WHERE column_name IN (SELECT STATEMENT); --subquery
 ```
+
 **30. What does UPPER function do?**
 
 The UPPER() function converts a string to upper-case.
@@ -576,26 +502,27 @@ The CURRENT_DATE() function is a synonym for the CURDATE() function.
 The MAX() function returns the largest value of the selected column.
 
 **MAX() Syntax**
+
 ```
 -   SELECT MAX(column_name)
 -   FROM table_name
 -   WHERE condition;
 ```
+
 **34. Which SQL functions is used to count the number of results?**
 
 The COUNT() function returns the number of rows that matches a specified criteria.
 
 **COUNT() Syntax**
+
 ```
 -   SELECT COUNT(column_name)
 -   FROM table_name
 -   WHERE condition;
 ```
-  
 
-  
 
-  
+
 
 **35. Which of the following are Aggregate Functions?**
 
@@ -622,12 +549,13 @@ Same answer as for the previous question.
 The ORDER BY keyword is used to sort the result-set in ascending or descending order.
 
 **ORDER BY Syntax**
+
 ```
 -   SELECT column1, column2, ...
 -   FROM table_name
 -   ORDER BY column1, column2, ... ASC|DESC;
 ```
-  
+
 
 **38. If you don't specify ASC or DESC for an ORDER BY clause, the following is used by default:**
 
@@ -650,14 +578,12 @@ The SELECT TOP clause is useful on large tables with thousands of records. Retur
 Not all database systems support the SELECT TOP clause.**MySQL supports the** LIMIT clause to select a limited number of records, while **Oracle uses** ROWNUM .
 
 **40. With SQL, how can you return all the records from a table named "Customers" sorted descending by "FirstName"?**
+
 ```
 _SELECT * FROM Customers ORDER BY FirstName DESC;_
 ```
+
 Same answers as for the previous 2 questions apply.
-
-  
-
-  
 
 **41. Which of the following SQL statements is correct?**
 
@@ -742,30 +668,27 @@ Yes. You can join multiple tables with inner join.
 For example, for a Faculty table the lookup tables might be Division, with DivisionID as the PK, Country, with CountryID as the PK, and Nationality, with NationalityID as the PK. To join Faculty to the Division, Country, and Nationality tables, the fields DivisionID, CountryID and NationalityID would need to be foreign keys in the Faculty table.  
 
 The SQL to join them would then be:
+
 ```
 -   SELECT <fieldlist> FROM Faculty AS f
 -   INNER JOIN Division AS d ON d.FacultyID = f.FacultyID
 -   INNER JOIN Country AS c ON c.FacultyID = f.FacultyID
 -   INNER JOIN Nationality AS n ON n.FacultyID = f.FacultyID
 ```
-  
 
-  
-
-  
-
-  
 
 **49. Can you join a table to itself?**
 
 Yes. The operation is called self join.
 
 **Self JOIN Syntax**
+
 ```
 -   SELECT column_name(s)
 -   FROM table1 T1, table1 T2
 -   WHERE condition;
 ```
+
 **50. Which of the following is true about Cartesian Products?**
 
 **A Cartesian product is formed when a join condition is omitted.**
@@ -775,18 +698,12 @@ The SQL CROSS JOIN produces a result set which is the number of rows in the firs
 If WHERE clause is used with CROSS JOIN , it functions like an INNER JOIN .
 
 **CROSS JOIN Syntax**  
+
 ```
 -   SELECT *
 -   FROM table1
 -   CROSS JOIN table2;
 ```
-  
-
-  
-
-  
-
-  
 
 **51. In relational algebra the INTERSECTION of two sets (set A and Set B) corresponds to**
 
@@ -795,6 +712,7 @@ If WHERE clause is used with CROSS JOIN , it functions like an INNER JOIN .
 The SQL INTERSECT clause/operator is used to combine two SELECT statements, but returns rows only from the first SELECT statement that are identical to a row in the second SELECT statement. This means INTERSECT returns only common rows returned by the two SELECT statements.
 
 **INTERSECT Syntax**
+
 ```
 -   SELECT column1 [, column2 ]
 -   FROM table1 [, table2 ]
@@ -804,21 +722,7 @@ The SQL INTERSECT clause/operator is used to combine two SELECT statements, but 
 -   FROM table1 [, table2 ]
 -   [WHERE condition]
 ```
-  
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 **52. In relational algebra the UNION of two sets (set A and Set B) corresponds to**
 
@@ -839,6 +743,7 @@ Have them in the same order
 But they need not have to be in the same length.
 
 **Union Syntax**
+
 ```
 -   SELECT column1 [, column2 ]
 -   FROM table1 [, table2 ]
@@ -848,7 +753,7 @@ But they need not have to be in the same length.
 -   FROM table1 [, table2 ]
 -   [WHERE condition]
 ```
-  
+
 
 **53. What is the difference between UNION and UNION ALL?**
 
@@ -863,6 +768,7 @@ UNION ALL – returns all rows selected by either query, including all duplicate
 The **SQL** MINUS operator is used to return all rows in the first SELECT statement that are not returned by the second SELECT statement. Each SELECT statement will define a dataset. The MINUS operator will retrieve all records from the first dataset and then remove from the results all records from the second dataset.
 
 **MINUS Syntax**
+
 ```
 -   SELECT expression1, expression2, ... expression_n
 -   FROM tables
@@ -872,19 +778,19 @@ The **SQL** MINUS operator is used to return all rows in the first SELECT statem
 -   FROM tables
 -   [WHERE conditions];
 ```
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
 
 **55. One (or more) select statement whose return values are used in filtering conditions of the main query is called**
 
@@ -893,11 +799,13 @@ The **SQL** MINUS operator is used to return all rows in the first SELECT statem
 A subquery is a SQL query nested inside a main query.
 
 A subquery may occur in :
+
 ```
 -   A SELECT clause
 -   A FROM clause
 -   A WHERE clause
 ```
+
 A subquery is usually added within the WHERE clause of another SQL SELECT statement.
 
 You can use the comparison operators, such as > , < , or = . The comparison operator can also be a multiple-row operator, such as IN , ANY , or ALL .
@@ -929,6 +837,7 @@ If the output of a subquery is depending on column values of the parent query ta
 The CASE function lets you evaluate conditions and return a value when the first condition is met (like an IF-THEN-ELSE statement).
 
 **CASE Syntax**
+
 ```
 -   CASE expression
 -   WHEN condition1 THEN result1
@@ -949,10 +858,6 @@ Note: Some people prefer to assign the SELECT statement to a category of its own
 
 **DCL** (Data Control Language): These statements are used to set privileges such as Grant and Revoke database access permission to the specific user.
 
-  
-
-  
-
 **62. Which of the following SQL statements are DDL**
 
 **DDL statements include:**
@@ -968,16 +873,14 @@ TRUNCATE TABLE
 **63. DML includes the following SQL statements**
 
 **DML statements are:**
+
 ```
 SELECT
-
 INSERT
-
 UPDATE
-
 DELETE
 ```
-  
+
 
 **64. Grant and Revoke commands are under**
 
@@ -986,10 +889,6 @@ DELETE
 GRANT : Used to provide any user access privileges or other privileges for the database.
 
 REVOKE : Used to take back permissions from any user.
-
-  
-
-  
 
 **65. Which of the following is not a DML statement?**
 
@@ -1008,15 +907,19 @@ The INSERT INTO statement is used to insert new records in a table.
 It is possible to write the INSERT INTO statement in two ways.
 
 The first way specifies both the column names and the values to be inserted:
+
 ```
 -   INSERT INTO table_name (column1, column2, column3, ...)
 -   VALUES (value1, value2, value3, ...);
 ```
+
 If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. The INSERT INTO syntax would be as follows:
+
 ```
 -   INSERT INTO table_name
 -   VALUES (value1, value2, value3, ...);
 ```
+
 **68. With SQL, how can you insert a new record into the "Customers" table?**
 
 Same answer as for the previous question.
@@ -1025,18 +928,18 @@ Same answer as for the previous question.
 
 Same answer as for the previous question.
 
-  
-
 **70. How do you create a temporary table in MySQL?**
 
 To create a temporary table, you just need to add the TEMPORARY keyword to the CREATE TABLE statement.
 
 Example:
+
 ```
 -   CREATE TEMPORARY TABLE top10customers
 -   SELECT customer.fname, customer.lname
 -   FROM customers
 ```
+
 -   /* all the conditions to fecth the top 10 customers */
 
 **71. Which SQL statement is used to update data in a database?**
@@ -1044,25 +947,31 @@ Example:
 The UPDATE statement is used to modify the existing records in a table.
 
 **UPDATE Syntax**
+
 ```
 -   UPDATE table_name
 -   SET column1 = value1, column2 = value2, ...
 -   WHERE condition;
 ```
+
 **72. What is the keyword is used in an UPDATE query to modify the existing value?**
 
 The answer is SET .
 
 **UPDATE Syntax**
+
 ```
 -   UPDATE table_name
 -   SET column1 = value1, column2 = value2, ...
 -   WHERE condition;
 ```
+
 **73. How can you change "Jackson" into "Hawkins" in the "LastName" column in the Customer table?**
+
 ```
 UPDATE Customers SET LastName='Hawkins' WHERE LastName='Jackson'  
 ```
+
 Same explanation as for the previous question.
 
 **74. Which SQL statement is used to delete data from a database?**
@@ -1070,11 +979,12 @@ Same explanation as for the previous question.
 The DELETE statement is used to delete existing records in a table.
 
 **DELETE Syntax**
+
 ```
 -   DELETE FROM table_name
 -   WHERE condition;
 ```
-  
+
 
 **75. With SQL, how can you delete the records where the "FirstName" is "John" in the Customers Table?**
 
@@ -1085,26 +995,34 @@ DELETE FROM Customers WHERE FirstName = 'John'
 Specify the table we are are selecting or deleting from.
 
 **DELETE Syntax**
+
 ```
 -   DELETE FROM table_name
 -   WHERE condition;
 ```
+
 **UPDATE Syntax**
+
 ```
 -   UPDATE table_name
 -   SET column1 = value1, column2 = value2, ...
 -   WHERE condition;
 ```
+
 **INSERT Syntax**
+
 ```
 -   INSERT INTO table_name (column1, column2, column3, ...)
 -   VALUES (value1, value2, value3, ...);
 ```
+
 **SELECT Syntax**
+
 ```
 -   SELECT column1, column2, ...
 -   FROM table_name;
 ```
+
 **77. What is the difference between DELETE and TRUNCATE?**
 
 The basic difference in both is DELETE is DML command and TRUNCATE is DDL.
@@ -1118,6 +1036,7 @@ We can use DELETE with WHERE clause but cannot use TRUNCATE with it.
 The CREATE TABLE statement is used to create a new table in a database.
 
 **Syntax**
+
 ```
 -   CREATE TABLE table_name (
 -   column1 datatype,
@@ -1126,23 +1045,6 @@ The CREATE TABLE statement is used to create a new table in a database.
 -   ....
 -   );
 ```
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 **79. What is Collation in SQL?**
 
@@ -1169,26 +1071,30 @@ AUTO_INCREMENT allows a unique number to be generated automatically when a new r
 **Syntax for MySQL**
 
 The following SQL statement defines the "ID" column to be an auto-increment primary key field in the "Persons" table:
+
+```sql
+CREATE TABLE Persons (
+ID int NOT NULL AUTO_INCREMENT,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int,
+PRIMARY KEY (ID)
+);
 ```
--   CREATE TABLE Persons (
--   ID int NOT NULL AUTO_INCREMENT,
--   LastName varchar(255) NOT NULL,
--   FirstName varchar(255),
--   Age int,
--   PRIMARY KEY (ID)
--   );
-```
+
 **Syntax for SQL Server**
 
 The following SQL statement defines the "ID" column to be an auto-increment primary key field in the "Persons" table:
+
+```sql
+CREATE TABLE Persons (
+ID int IDENTITY(1,1) PRIMARY KEY,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int
+);
 ```
--   CREATE TABLE Persons (
--   ID int IDENTITY(1,1) PRIMARY KEY,
--   LastName varchar(255) NOT NULL,
--   FirstName varchar(255),
--   Age int
--   );
-```
+
 **Syntax for Oracle**
 
 In Oracle the code is a little bit more tricky.
@@ -1196,20 +1102,24 @@ In Oracle the code is a little bit more tricky.
 You will have to create an auto-increment field with the sequence object (this object generates a number sequence).
 
 Use the following **CREATE SEQUENCE syntax:**
+
+```sql
+CREATE SEQUENCE seq_person
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
 ```
--   CREATE SEQUENCE seq_person
--   MINVALUE 1
--   START WITH 1
--   INCREMENT BY 1
--   CACHE 10;
-```
+
 The code above creates a sequence object called seq_person, that starts with 1 and will increment by 1. It will also cache up to 10 values for performance. The cache option specifies how many sequence values will be stored in memory for faster access.
 
 To insert a new record into the "Persons" table, we will have to use the nextval function (this function retrieves the next value from seq_person sequence):
+
+```sql
+INSERT INTO Persons (ID,FirstName,LastName)
+VALUES (seq_person.nextval,'Lars','Monsen');
 ```
--   INSERT INTO Persons (ID,FirstName,LastName)
--   VALUES (seq_person.nextval,'Lars','Monsen');
-```
+
 The SQL statement above would insert a new record into the "Persons" table. The "ID" column would be assigned the next number from the seq_person sequence. The "FirstName" column would be set to "Lars" and the "LastName" column would be set to "Monsen".
 
 **81. What are valid constraints in MySQL?**
@@ -1222,19 +1132,19 @@ Constraints can be column level or table level. Column level constraints apply t
 
 The following constraints are commonly used in SQL:
 
-NOT NULL - Ensures that a column cannot have a NULL value
+- NOT NULL - Ensures that a column cannot have a NULL value
 
-UNIQUE - Ensures that all values in a column are different
+- UNIQUE - Ensures that all values in a column are different
 
-PRIMARY KEY - A combination of a NOT NULL and UNIQUE . Uniquely identifies each row in a table
+- PRIMARY KEY - A combination of a NOT NULL and UNIQUE . Uniquely identifies each row in a table
 
-FOREIGN KEY - Uniquely identifies a row/record in another table
+- FOREIGN KEY - Uniquely identifies a row/record in another table
 
-CHECK - Ensures that all values in a column satisfies a specific condition
+- CHECK - Ensures that all values in a column satisfies a specific condition
 
-DEFAULT - Sets a default value for a column when no value is specified
+- DEFAULT - Sets a default value for a column when no value is specified
 
-INDEX - Used to create and retrieve data from the database very quickly
+- INDEX - Used to create and retrieve data from the database very quickly
 
   
 
@@ -1254,21 +1164,11 @@ FOREIGN KEY - Uniquely identifies a row/record in another table
 
 NOT NULL - Ensures that a column cannot have a NULL value.
 
-  
-
 **84. An unique (non-key) field**
 
 The UNIQUE constraint ensures that all values in a column are different.
 
-  
-
-  
-
-  
-
-  
-
-  
+ 
 
 **85. What is CHECK Constraint?**
 
@@ -1283,15 +1183,17 @@ If you define a CHECK constraint on a table it can limit the values in certain c
 The following SQL creates a CHECK constraint on the "Age" column when the "Persons" table is created. The CHECK constraint ensures that you can not have any person below 18 years:
 
 **MySQL:**
+
+```sql
+CREATE TABLE Persons (
+ID int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int,
+CHECK (Age>=18)
+);
 ```
--   CREATE TABLE Persons (
--   ID int NOT NULL,
--   LastName varchar(255) NOT NULL,
--   FirstName varchar(255),
--   Age int,
--   CHECK (Age>=18)
--   );
-```
+
 **SQL Server / Oracle / MS Access:**
 
 -   CREATE TABLE Persons (
@@ -1300,8 +1202,6 @@ The following SQL creates a CHECK constraint on the "Age" column when the "Perso
 -   FirstName varchar(255),
 -   Age int CHECK (Age>=18)
 -   );
-
-  
 
 **86. What is the difference between UNIQUE and PRIMARY KEY constraints?**
 
@@ -1313,35 +1213,20 @@ A PRIMARY KEY constraint automatically has a UNIQUE constraint.
 
 However, you can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.
 
-  
-
 **87. What does SQL DROP TABLE clause do?**
 
 The DROP TABLE statement is used to drop an existing table in a database.
 
 **Syntax**
+
+```sql
+DROP TABLE table_name;
 ```
-_DROP TABLE table_name;_
-```
-  
+
 
 **88. What is the difference between DROP and TRUNCATE?**
 
-TRUNCATE removes all rows from the table which cannot be retrieved back, DROP removes the entire table from the database and it cannot be retrieved back.
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+TRUNCATE removes all rows from the table which cannot be retrieved back, DROP removes the entire table from the database and it cannot be retrieved back.  
 
 **89. How do you add a 'order_date' column to a table called 'order'?**
 
@@ -1354,10 +1239,12 @@ The ALTER TABLE statement is also used to add and drop various constraints on an
 **ALTER TABLE - ADD Column**
 
 To add a column in a table, use the following syntax:
+
+```sql
+ALTER TABLE table_name
+ADD column_name datatype;
 ```
--   ALTER TABLE table_name
--   ADD column_name datatype;
-```
+
 **90. What the correct syntax to rename column 'Address' to 'Addr' in 'Customer' table?**
 
 ALTER TABLE Customer CHANGE Address Addr varchar(50);
@@ -1367,17 +1254,12 @@ ALTER TABLE - CHANGE
 You rename a column using the ALTER TABLE and CHANGE commands together to change an existing column.
 
 **Syntax**
+
+```sql
+ALTER TABLE table_name
+CHANGE oldname newname datatype 
 ```
--   ALTER TABLE table_name
--   CHANGE oldname newname datatype ;
-```
-  
 
-  
-
-  
-
-  
 
 **91. Consider the following schema ADDRESSES (id, street_name, number, city, state) Which code snippet will alter the table ADDRESSES and delete the column named CITY?**
 
@@ -1386,13 +1268,11 @@ ALTER TABLE addresses DROP COLUMN city;
 ALTER TABLE - DROP COLUMN
 
 To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):
-```
--   ALTER TABLE table_name
--   DROP COLUMN column_name;
-```
-  
 
-  
+```sql
+ALTER TABLE table_name
+DROP COLUMN column_name;
+```
 
 **92. What are Indexes in SQL?**
 
@@ -1403,15 +1283,12 @@ Note: Updating a table with indexes takes more time than updating a table withou
 **CREATE INDEX Syntax**
 
 Creates an index on a table. Duplicate values are allowed:
-```
--   CREATE INDEX index_name
--   ON table_name (column1, column2, ...);
-```
-  
 
-  
+```sql
+CREATE INDEX index_name
+ON table_name (column1, column2, ...)
+```
 
-  
 
 **93. What is the difference between clustered and non-clustered indexes? Which of the following statements are true?**
 
@@ -1428,25 +1305,26 @@ SQL GRANT and REVOKE commands are used to implement privileges in SQL multiple u
 GRANT Command: This command is used provide database access to user apart from an administrator.
 
 **Syntax**
+
+```sql
+GRANT privilege_name
+ON object_name
+TO {user_name|PUBLIC|role_name}
+[WITH GRANT OPTION];
 ```
--   GRANT privilege_name
--   ON object_name
--   TO {user_name|PUBLIC|role_name}
--   [WITH GRANT OPTION];
-```
+
 In above syntax WITH GRANT OPTIONS indicates that the user can grant the access to another user too.
 
 REVOKE Command: This command is used provide database deny or remove access to database objects.
 
 **Syntax**
-```
--   REVOKE privilege_name
--   ON object_name
--   FROM {user_name|PUBLIC|role_name};
-```
-  
 
-  
+```sql
+REVOKE privilege_name
+ON object_name
+FROM {user_name|PUBLIC|role_name}
+```
+
 
 **95. How many types of Privileges are available in SQL?**
 
@@ -1462,31 +1340,7 @@ Same answers as for the previous question
 
 **97. What does the term 'locking' refer to?**
 
-Locking is a process preventing users from reading data being changed by other users, and prevents concurrent users from changing the same data at the same time.
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+Locking is a process preventing users from reading data being changed by other users, and prevents concurrent users from changing the same data at the same time.  
 
 **98. What are a transaction's main controls?**
 
@@ -1497,9 +1351,11 @@ When we use any DML command like INSERT , UPDATE or DELETE , the changes made by
 To avoid that, we use the COMMIT command to mark the changes as permanent.
 
 Following is commit command syntax:
+
+```sql
+COMMIT;
 ```
-_COMMIT;_
-```
+
 ROLLBACK command
 
 This command restores the database to last committed state. It is also used with SAVEPOINT command to jump to a savepoint in an ongoing transaction.
@@ -1508,21 +1364,15 @@ If we have used the UPDATE command to make some changes into the database, and r
 
 Following is rollback command syntax:
 
-_ROLLBACK TO savepoint_name;_
+- _ROLLBACK TO savepoint_name;_
 
-SAVEPOINT command
+- SAVEPOINT command
 
-SAVEPOINT command is used to temporarily save a transaction so that you can rollback to that point whenever required.
-
-  
-
-  
-
-  
+- SAVEPOINT command is used to temporarily save a transaction so that you can rollback to that point whenever required.  
 
 Following is savepoint command syntax:
 
-_SAVEPOINT savepoint_name;_
+- _SAVEPOINT savepoint_name;_
 
 In short, using this command we can name the different states of our data in any table and then rollback to that state using the ROLLBACK command whenever required.
 
@@ -1532,27 +1382,7 @@ Committed**.**
 
 **100. Consider the following code: START TRANSACTION /*transaction body*/ COMMIT; ROLLBACK; What does Rollback do?**
 
-It does nothing. Once a transaction has executed commit, its effects can no longer be undone by rollback.
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+It does nothing. Once a transaction has executed commit, its effects can no longer be undone by rollback.  
 
 **101. What are valid properties of the transaction?**
 
@@ -1560,21 +1390,21 @@ The characteristics of these four properties as defined by Reuter and Härder ar
 
 **Atomicity**
 
-Atomicity requires that each transaction be "all or nothing": if one part of the transaction fails, then the entire transaction fails, and the database state is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. To the outside world, a committed transaction appears (by its effects on the database) to be indivisible ("atomic"), and an aborted transaction does not happen.
+​	Atomicity requires that each transaction be "all or nothing": if one part of the transaction fails, then the entire transaction fails, and the database state is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. To the outside world, a committed transaction appears (by its effects on the database) to be indivisible ("atomic"), and an aborted transaction does not happen.
 
 **Consistency**
 
-The consistency property ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules, including constraints, cascades, triggers, and any combination thereof. This does not guarantee correctness of the transaction in all ways the application programmer might have wanted (that is the responsibility of application-level code), but merely that any programming errors cannot result in the violation of any defined rules.
+​	The consistency property ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules, including constraints, cascades, triggers, and any combination thereof. This does not guarantee correctness of the transaction in all ways the application programmer might have wanted (that is the responsibility of application-level code), but merely that any programming errors cannot result in the violation of any defined rules.
 
 **Isolation**
 
-The isolation property ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially, i.e., one after the other. Providing isolation is the main goal of concurrency control. Depending on the concurrency control method (i.e., if it uses strict - as opposed to relaxed - serializability), the effects of an incomplete transaction might not even be visible to another transaction.
+​	The isolation property ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially, i.e., one after the other. Providing isolation is the main goal of concurrency control. Depending on the concurrency control method (i.e., if it uses strict - as opposed to relaxed - serializability), the effects of an incomplete transaction might not even be visible to another transaction.
 
 **Durability**
 
-The durability property ensures that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors. In a relational database, for instance, once a group of SQL statements execute, the results need to be stored permanently (even if the database crashes immediately thereafter). To defend against power loss, transactions (or their effects) must be recorded in a non-volatile memory.
+​	The durability property ensures that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors. In a relational database, for instance, once a group of SQL statements execute, the results need to be stored permanently (even if the database crashes immediately thereafter). To defend against power loss, transactions (or their effects) must be recorded in a non-volatile memory.
 
-  
+ 
 
 **102. What happens if autocommit is enabled?**
 
@@ -1599,17 +1429,14 @@ A view contains rows and columns, just like a real table. The fields in a view a
 You can add SQL functions, WHERE , and JOIN statements to a view and present the data as if the data were coming from one single table.
 
 **CREATE VIEW Syntax**
-```
--   CREATE VIEW view_name AS
--   SELECT column1, column2, ...
--   FROM table_name
--   WHERE condition;
-```
-  
 
-  
+```sql
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
 
-  
 
 **106. Are views updatable using INSERT, DELETE or UPDATE?**
 
@@ -1633,15 +1460,7 @@ When can a view be updated?
 
 7. If the view you want to update is based upon another view, the later should be updatable.
 
-8. Any of the selected output fields (of the view) must not use constants, strings or value expressions.
-
-  
-
-  
-
-  
-
-  
+8. Any of the selected output fields (of the view) must not use constants, strings or value expressions.  
 
 **107. What are the advantages of Views?**
 
@@ -1665,15 +1484,9 @@ You can delete a view with the DROP VIEW command.
 
 _DROP VIEW view_name;_
 
-  
-
 **110. Can a View based on another View?**
 
-Yes, A View is based on another View.
-
-  
-
-  
+Yes, A View is based on another View.  
 
 **111. Inside a stored procedure you to iterate over a set of rows returned by a query using a**
 
@@ -1686,97 +1499,47 @@ Cursor follows steps as given below:
 -   Retrieve row from the Cursor
 -   Process the row
 -   Close Cursor
--   Deallocate Cursor
-
-  
+-   Deallocate Cursor  
 
 **112. How do you call the process of finding a good strategy for processing a query?**
 
 Query optimization is a function of many relational database management systems. The query optimizer attempts to determine the most efficient way to execute a given query by considering the possible query plans.
 
-  
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-**113. What is a trigger?**
+**113. What is a trigger? or  There are triggers for…* or  A trigger is applied to**
 
 Triggers in SQL is kind of stored procedures used to create a response to a specific action performed on the table. You can invoke triggers explicitly on the table in the database.
 
 Triggers are, in fact, written to be executed in response to any of the following events:
 
-A database manipulation (DML) statement (DELETE , INSERT , or UPDATE )
+- A database manipulation (DML) statement (DELETE , INSERT , or UPDATE )
 
-A database definition (DDL) statement (CREATE , ALTER , or DROP ).
+- A database definition (DDL) statement (CREATE , ALTER , or DROP ).
 
-A database operation (SERVERERROR , LOGON , LOGOFF , STARTUP , or SHUTDOWN ).
+- A database operation (SERVERERROR , LOGON , LOGOFF , STARTUP , or SHUTDOWN ).
 
 Action and Event are two main components of SQL triggers when certain actions are performed the event occurs in response to that action.
 
 **Syntax**
+
+```sql
+CREATE TRIGGER name {BEFORE|AFTER} (event [OR..]}
+ON table_name [FOR [EACH] {ROW|STATEMENT}]
+EXECUTE PROCEDURE functionname {arguments}
 ```
--   CREATE TRIGGER name {BEFORE|AFTER} (event [OR..]}
--   ON table_name [FOR [EACH] {ROW|STATEMENT}]
--   EXECUTE PROCEDURE functionname {arguments}
-```
-**114. There are triggers for…**
 
-Same answer as for the previous question.
-
-**115. A trigger is applied to**
-
-Same answer as for the previous question.
-
-  
-
-  
-
-**116. A special kind of a stored procedure that executes in response to certain action on the table like insertion, deletion or updation of data is called**
+**114. A special kind of a stored procedure that executes in response to certain action on the table like insertion, deletion or updation of data is called**
 
 **Trigger.**
 
-Same answer as for the previous question.
 
-**117. What is SQL Injection?**
+**115. What is SQL Injection?**
 
-SQL injection is a code injection technique that might destroy your database.
+- SQL injection is a code injection technique that might destroy your database.
 
-SQL injection is one of the most common web hacking techniques.
+- SQL injection is one of the most common web hacking techniques.
 
-SQL injection is the placement of malicious code in SQL statements, via web page input.
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+- SQL injection is the placement of malicious code in SQL statements, via web page input.
 
   
 
@@ -1786,4 +1549,4 @@ SQL injection is the placement of malicious code in SQL statements, via web page
 
 [www.w3schools.com](http://www.w3schools.com/)
 
-[www.freefeast.info](http://www.freefeast.info/)
+[www.freefeast.info](
