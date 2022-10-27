@@ -1023,7 +1023,7 @@ But what if we want to say that the lowercase and uppercase letters are equivale
 
 In real life, most character sets have many characters: not just A and B but whole alphabets, sometimes multiple alphabets or eastern writing systems with thousands of characters, along with many special symbols and punctuation marks. Also in real life, most collations have many rules, not just for whether to distinguish lettercase, but also for whether to distinguish accents (an “accent” is a mark attached to a character as in German Ö), and for multiple-character mappings (such as the rule that Ö = OE in one of the two German collations).
 
-_Source: dev.myslq.com_
+_Source: dev.mysql.com_
 
 **80. What is true about an AUTO_INCREMENT column in SQL?**
 
